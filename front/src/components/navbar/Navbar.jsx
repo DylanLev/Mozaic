@@ -1,35 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.scss'; // Import the CSS file for styling
+import './Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo and Branding */}
-        <Link to="/" className="navbar-logo">
-          <img src="/images/logo.png" alt="AI Wrapper Logo" className="navbar-logo-img" />
+        <Link to="/" className="navbar-brand">
+          <span className="brand-text">Moz<span className="ai-text">AI</span>c</span>
         </Link>
-
-        {/* Navigation Links */}
-        <ul className="navbar-menu">
-          <li className="navbar-item">
-            <Link to="/" className="navbar-links">Home</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/about" className="navbar-links">About</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/pricing" className="navbar-links">Pricing</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/contact" className="navbar-links">Contact</Link>
-          </li>
-        </ul>
-
-        {/* Action Button - Call to Action */}
-        <div className="navbar-actions">
-          <Link to="/donate" className="navbar-donate-btn">Make a Donation</Link>
+        
+        <div className="navbar-links">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/gallery" className="nav-link">Gallery</Link>
+          <Link to="/about" className="nav-link">About</Link>
         </div>
       </div>
     </nav>

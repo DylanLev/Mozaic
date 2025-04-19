@@ -1,0 +1,213 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 160px); /* Account for header and footer */
+  background-color: #0a192f;
+  color: white;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #bdc3c7;
+}
+
+.upload-section {
+  margin-bottom: 3rem;
+}
+
+.dropzone {
+  border: 2px dashed #3498db;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgba(52, 152, 219, 0.1);
+  color: white;
+}
+
+.dropzone.active {
+  border-color: #9b59b6;
+  background-color: rgba(155, 89, 182, 0.1);
+}
+
+.dropzone.has-image {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.preview-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.change-image-btn {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background-color: rgba(10, 25, 47, 0.9);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.change-image-btn:hover {
+  background-color: rgba(10, 25, 47, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.upload-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  color: #3498db;
+}
+
+.upload-hint {
+  color: #bdc3c7;
+  font-size: 0.9rem;
+}
+
+.style-section {
+  margin-bottom: 3rem;
+}
+
+.style-section h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.style-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid rgba(52, 152, 219, 0.2);
+  border-radius: 10px;
+  background: rgba(10, 25, 47, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.style-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-color: #3498db;
+}
+
+.style-option.selected {
+  border-color: #9b59b6;
+  background: rgba(155, 89, 182, 0.1);
+}
+
+.style-preview {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ghibli-preview {
+  background-image: url('https://example.com/ghibli-preview.jpg'); /* Replace with actual preview image */
+}
+
+.figurine-preview {
+  background-image: url('https://example.com/figurine-preview.jpg'); /* Replace with actual preview image */
+}
+
+.watercolor-preview {
+  background-image: url('https://example.com/watercolor-preview.jpg'); /* Replace with actual preview image */
+}
+
+.pixel-preview {
+  background-image: url('https://example.com/pixel-preview.jpg'); /* Replace with actual preview image */
+}
+
+.generate-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.generate-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #3498db, #9b59b6);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.generate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .style-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+} 
