@@ -1,0 +1,16 @@
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore virtual environment
+env/
+
+# Ignore model files or large data that shouldn't be tracked
+/models/
+*.log
+*.json
+*.h5
+*.pkl
+
+# Ignore any other unnecessary files
+*.csv
